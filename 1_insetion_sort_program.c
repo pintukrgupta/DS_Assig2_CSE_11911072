@@ -1,3 +1,4 @@
+//Program for insertion sorting
 #include<stdio.h>
 void insertion_sort(int a[],int);
 int main()
@@ -19,10 +20,11 @@ void insertion_sort(int a[],int n)
        key=a[i];
       j=i-1;
 
-  while(j>=0&&a[j]>key)
+  while(j>=0 && a[j]>key)  // here we write j>=0 because we compare upto 0 location 
   {
-      a[j+1]=a[j];
-      j=j-1;
+      a[j+1]=a[j];  // Interchange the current data
+      j=j-1;  /* Move elements of arr[0..i-1], that are greater than key, 
+                  to one position ahead of their current position */
   }
   a[j+1]=key;
   }
